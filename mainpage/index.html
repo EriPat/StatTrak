@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>🏀</title>
+    <link rel="stylesheet" href="css\bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="loadPlayers.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+ 
+
+ </head>
+    <div id="one">
+  <body>
+      <p>1</p>
+      <div class="container">
+        <div class="jumbotron">
+          <h1 id="score">Score: 0</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row" id="players">
+            <div class='col-md-3'>
+              <h2>Player Name</h2>
+            </div>
+            <div class='col-md-3'>
+              <h2>Number</h2>
+            </div>
+            <div class='col-md-2'>
+              <h2>Fouls</h2>
+            </div>
+            <div class='col-md-4'>
+              <h2>Points</h2>
+            </div>
+          <hr class="col-md-12"></hr>
+        </div>
+      </div>
+      <hr></hr>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 btn-group">
+            <input class="form-control" id="teamCode" placeholder="Enter Team Code">
+          </div>
+          <div class="col-md-2 btn-group">
+            <button class="btn btn-info" onclick="loadPlayers()">Load Players</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="two" hidden>
+      <p>2</p>
+      <div class="container">
+        <div class="jumbotron">
+          <h1 id="score2">Score: 0</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row" id="players2">
+            <div class='col-md-1'>
+              <h5>Player Name</h5>
+            </div>
+            <div class='col-md-1'>
+              <h5>Number</h5>
+            </div>
+            <div class='col-md-2'>
+              <h5>Fouls</h5>
+            </div>
+            <div class='col-md-1'>
+              <h5>Points</h5>
+            </div>
+          <hr class="col-md-12"></hr>
+        </div>
+      </div>
+      <hr></hr>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 btn-group">
+            <input class="form-control" id="teamCode2" placeholder="Enter Team Code">
+          </div>
+          <div class="col-md-2 btn-group">
+            <button class="btn btn-info" onclick="loadPlayers2()">Load Players</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button onclick='myFunction()'>click</button>
+  </body>
+</html>

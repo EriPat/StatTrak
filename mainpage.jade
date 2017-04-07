@@ -1,0 +1,28 @@
+doctype html
+
+html
+  head
+    meta(charset = 'utf-8')
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    title Stat Trak Home Page
+    link(href='/css/bootstrap.css', rel='stylesheet')
+    link(href='/css/scrolling-nav.css', rel='stylesheet')
+
+  body(id="page-top" datadata-spy="scroll" data-target=".navbar-fixed-top").
+    nav(class="navbar navbar-default navbar-fixed-top" role="navigation").
+      div(class=container).
+        div(class=navbar-header page-scroll).
+          h(class="navbar-brand page-scroll" href="#page-top").
+            <strong>Stat Trak</strong>
+    div(class="collapse navbar-collapse navbar-ex1-collapse").
+      ul(class="nav navbar-nav")
+        li
+          a(href="#record") Record Game
+        li
+          a(href="#stats") Stats
+        li
+          a(href="#account") Account
+
+          

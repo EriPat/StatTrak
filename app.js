@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 
 var app = express();
-var session = require('express-session')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.use('/', routes);
+app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -54,22 +53,6 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-// Use the session middleware
-app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }}))
 
-// Access the session as req.session
-app.get('/test', function(req, res, next) {
-  var sess = req.session
-  if (sess.views) {
-    sess.views++
-    res.setHeader('Content-Type', 'text/html')
-    res.write('<p>views: ' + sess.views + '</p>')
-    res.write('<p>expires in: ' + (sess.cookie.maxAge / 1000) + 's</p>')
-    res.end()
-  } else {
-    sess.views = 1
-    res.end('welcome to the session demo. refresh!')
-  }
-})
 
 module.exports = app;

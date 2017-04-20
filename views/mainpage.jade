@@ -7,8 +7,8 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1")
 
     title Stat Trak Home Page
-    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
-    link(href='/stylesheets/scrolling-nav.css', rel='stylesheet')
+    link(href='/css/bootstrap.css', rel='stylesheet')
+    link(href='/css/scrolling-nav.css', rel='stylesheet')
 
   body(id="page-top" datadata-spy="scroll" data-target=".navbar-fixed-top")
     nav(class="navbar navbar-default navbar-fixed-top" role="navigation")
@@ -16,11 +16,22 @@ html
         div(class="navbar-header page-scroll")
           h(class="navbar-brand page-scroll" href="#page-top")
             <strong>Stat Trak</strong>
-        div(class="collapse navbar-collapse navbar-ex1-collapse")
-          ul(class="nav navbar-nav")
-            li
-              a(href="#record") Record Game
-            li
-              a(href="#stats") Stats
-            li
-              a(href="#account") Account
+    div(class="collapse navbar-collapse navbar-ex1-collapse")
+      ul(class="nav navbar-nav")
+        li
+          a(href="#record") Record Game
+        li
+          a(href="#stats") Stats
+        li
+          a(href="#account") Account
+  section(id="intro" class ="intro-section")
+        div(class="container")
+          div(class = "col-lg-12")
+            h1 Welcome to StatTrak
+            div(style="float:left; width:50%")
+              Left
+            div(style= "float:right; width:50%")
+              right
+            div(class="verticalLine")
+              some other content
+              

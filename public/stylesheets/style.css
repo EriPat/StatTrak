@@ -6,3 +6,38 @@ body {
 a {
   color: #00B7FF;
 }
+
+.record {
+  height: 100px;
+}
+
+.record-item{
+  line-height: 80px;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 36px;
+}
+
+.vertical-line {
+  border-left: solid;
+  border-color: #FFF;
+  margin-left: 15px;
+}
+
+.win {
+  background-color: #42f45f;
+  line-height: 80px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 48px;
+  width: 100px;
+}
+
+.lose {
+  background-color: #f45642;
+  line-height: 80px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 48px;
+  width: 100px;
+}

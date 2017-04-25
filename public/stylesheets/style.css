@@ -1,43 +1,60 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
-.record {
-  height: 100px;
-}
-
 .record-item{
-  line-height: 80px;
+  line-height: 60px;
   vertical-align: middle;
   text-align: left;
-  font-size: 36px;
-}
-
-.vertical-line {
-  border-left: solid;
-  border-color: #FFF;
-  margin-left: 15px;
+  font-size: 32px;
 }
 
 .win {
   background-color: #42f45f;
-  line-height: 80px;
   vertical-align: middle;
   text-align: center;
   font-size: 48px;
-  width: 100px;
+  width: 90px;
+  line-height: 60px;
 }
 
 .lose {
   background-color: #f45642;
-  line-height: 80px;
   vertical-align: middle;
   text-align: center;
   font-size: 48px;
-  width: 100px;
+  width: 90px;
+  line-height: 60px;
+}
+
+.record-row {
+  background-color: #393939;
+}
+
+.upcoming{
+  background-color: #393939;
+}
+
+.back-inverse {
+  background-color: #c4c2be;
+  line-height: 45px;
+}
+
+.games{
+  background-color: #59706f;
+}
+
+.recent{
+  text-align: center;
+  background-color: #59706f;
+}
+
+.intro-section{
+  padding-top: 50px;
+}
+
+body {
+  background-color: #dbe0e0;
+}
+
+table{
+  background-color: #dbe0e0;
+  border-color: #dbe0e0;
+  border: #dbe0e0;
 }

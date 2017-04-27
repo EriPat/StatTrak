@@ -5,32 +5,59 @@ html
     meta(charset = 'utf-8')
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-
     title Stat Trak Home Page
-    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
-    link(href='/stylesheets/scrolling-nav.css', rel='stylesheet')
+    link(href='../public/stylesheets/bootstrap.css', rel='stylesheet')
+    link(href='../public/stylesheets/scrolling-nav.css', rel='stylesheet')
+    link(href='..public/stylesheets/style.css' rel = 'stylesheet')
 
   body(id="page-top" datadata-spy="scroll" data-target=".navbar-fixed-top")
-    nav(class="navbar navbar-default navbar-fixed-top" role="navigation")
+    nav(class="navbar navbar-toggleable-md navbar-light back-inverse")
       div(class="container")
-        div(class="navbar-header page-scroll")
-          h(class="navbar-brand page-scroll" href="#page-top")
-            <strong>Stat Trak</strong>
-        div(class="collapse navbar-collapse navbar-ex1-collapse")
-          ul(class="nav navbar-nav")
-            li
-              a(href="#record") Record Game
-            li
-              a(href="#stats") Stats
-            li
-              a(href="#account") Account
+        button(class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+          span(class = "navbar-toggler-icon")
+        img(src='../public/favicon.ico')
+        a(class = "navbar-brand" href= "#")StatTrak
+        div(class="collapse navbar-collapse" id="navbarNav")
+          ul(class="navbar-nav")
+            li(class="nav-item")
+              a(class="nav-link" href="#RecordGame")Record Game
+            li(class="nav-item")
+              a(class="nav-link" href="#Stats")Stats
+            li(class="nav-item")
+              a(class="nav-link" href="#Account")Account
 
-    section(id="intro" class ="intro-section")
-          div(class="container")
-            div(class = "col-lg-12")
-              h1 Welcome to StatTrak
-              br
-              div(class="col-md-8")
-                p Left
-              div(class="col-md-4")
-                p right
+    section(id="intro" class="intro-section")
+      div(class="container")
+        div(class="row")
+          div(class= "col-md-9 col-sm-12")
+            table(class='table table-inverse')
+              thead
+                tbody
+                  tr(class="record-row")
+                    th(class="win")W
+                    td(class="record-item")Score: 72 - 65
+                  tr(class="record-row")
+                    th(class="lose")L
+                    td(class="record-item")Score: 66 - 69
+                  tr(class="record-item")
+                    th(class="lose")L
+                    td(class="record-item")Score: 63 -75
+
+        div(class = "col-md-2 col-sm-12")
+          table(class="table table-inverse")
+            thead
+              th(colspan="3" class="games")Upcoming Games
+            tbody
+              tr(class="upcoming")
+                th Away
+                td VS. Kennedy
+                td 2 Days
+              tr(class="upcoming")
+                th Home
+                td VS. Teaneck
+                td 4 days
+              tr(class="upcoming")
+                th Away
+                td VS. NVOT
+                td 8 Days
+                

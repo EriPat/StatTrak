@@ -5,7 +5,7 @@ html
     meta(charset = 'utf-8')
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    title Stat Trak Home Page
+    title Stat Trak Stats
     link(href='/stylesheets/bootstrap.css', rel='stylesheet')
     link(href='/stylesheets/scrolling-nav.css', rel='stylesheet')
     link(href='/stylesheets/style.css' rel = 'stylesheet')
@@ -27,30 +27,23 @@ html
               a(class="nav-link" href="account") Account
 
     section(id="intro" class="intro-section")
-      div(class="container")
-        div(class="row")
-          div(class= "col-md-9 col-sm-12")
-            table(class='table table-inverse')
-              thead
-                tbody
-                  each game in games
-                    form(id="#{game._id}" action='/viewGame', method='post')
-                      input(type='hidden', name='gameID', value='#{game._id}')
-                    tr(class="record-row" onclick="document.getElementById('#{game._id}').submit()")
-                      if game.result == "w"
-                        th(class="win") W
-                      else if game.result == "l"
-                        th(class="lose") L
-                      else if game.result == "t"
-                        th(class="tie") T
-                      td(class="record-item") Score: #{game.score}
-          div(class = "col-md-2 col-sm-12")
-            table(class="table table-inverse")
-              thead
-                th(colspan="3" class="games") Upcoming Games
+    div(class="container")
+      h1(class="team_logo") #{team}
+      div(class="row")
+        div(class= "col-md-12 col-sm-12")
+          table(class='table table-inverse')
+            thead
               tbody
-                each game in scheduledGames
-                  tr(class="upcoming")
-                    th #{game.location}
-                    td VS. #{game.AwayTeam}
-                    td #{game.date}
+                tr(class="record-row")
+                  th(class="record-item") Name
+                  th(class="record-item") Number
+                  th(class="record-item") 1Pt
+                  th(class="record-item") 2Pts
+                  th(class="record-item") 3Pts
+                each player in players
+                  tr(class="record-row")
+                    td(class="record-item") #{player.name.last} , #{player.name.first}
+                    td(class="record-item") #{player.number}
+                    td(class="record-item") #{player.pt1}
+                    td(class="record-item") #{player.pt2}
+                    td(class="record-item") #{player.pt3}
